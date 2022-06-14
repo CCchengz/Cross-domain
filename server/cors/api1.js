@@ -21,7 +21,7 @@ app.get("/user", (req, res) => {
 // 托管`index.html`页面
 // 这样的话在`index.html`中发起的请求，默认的源就是`http://localhost:8000`
 // 然后再去请求`http://localhost:8003`就会出现跨域了
-// app.use("/static", express.static("public"));
+app.use("/static", express.static("src"));
 
 app.listen("8000", () => {
   console.log("api1 running at port 8000");
